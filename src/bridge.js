@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import {ethers} from 'ethers';
+import ethers from 'ethers';
 import { ProgressBar } from './utils/progressbar.js'
 
 const FUJI_ENDPOINT = "https://api.avax-test.network/ext/bc/C/rpc";
