@@ -1,20 +1,20 @@
 fn ration_food(n: u32) -> u128 {
-    // Special cases for multiples of 4 and 9
-    if n % 4 == 0 || n % 9 == 0 {
+    // Skip eating every 5th day starting from day 4
+    if (n + 1) % 5 == 0 {
         return 0;
     }
     
-    // For other numbers, calculate Fibonacci
+    // For other days, follow Fibonacci sequence
     if n == 0 {
         return 0;
     }
-    if n == 1 {
+    if n == 1 || n == 2 {
         return 1;
     }
     
-    let mut prev: u128 = 0;
+    let mut prev: u128 = 1;
     let mut curr: u128 = 1;
-    let mut i: u32 = 2;
+    let mut i: u32 = 3;
     
     while i <= n {
         let next = prev + curr;
