@@ -14,11 +14,15 @@ fn is_prime(volume: u256) -> bool {
 
     // Check divisibility up to square root of volume
     let mut i: u256 = 2;
+    let mut is_prime = true;
+    
     while i * i <= volume {
         if volume % i == 0 {
-            return false;
+            is_prime = false;
+            break;
         }
         i += 1;
-    }
-    true
+    };
+    
+    is_prime
 }

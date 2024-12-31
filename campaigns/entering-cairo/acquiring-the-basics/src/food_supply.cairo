@@ -21,7 +21,7 @@ fn ration_food(n: u32) -> u128 {
         a = b;
         b = temp;
         i += 1;
-    }
+    };
     
     b
 }
